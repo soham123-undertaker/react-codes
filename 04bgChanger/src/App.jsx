@@ -28,6 +28,7 @@ function App() {
         </div>
       </div>
     </div>
+    // onclick requires a function...so we pass setColor inside a function...otherwise if we would have written simply OnClick then it would be a reference only and onClick would get the value after executing setColor not a function.
   )
 }
 
