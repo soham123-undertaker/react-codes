@@ -16,7 +16,7 @@ function App() {
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     
     if(numAllowed) str += "0123456789"
-    if(charAllowed) str += "!@#$%^&*()"
+    if(charAllowed) str += "!@#$%^&*()[]{}~"
 
     for(let i = 1;i<=length;i++){
       let char = Math.floor(Math.random()*str.length + 1);
@@ -29,6 +29,7 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(()=>{
     passwordRef.current?.select()
+    //? is optional select.If the password is empty then it will not select
     //passwordRef has access to the password text inside the textbox and we select its current value using current.select().
     // passwordRef.current?.setSelectionRange(0,3); //This is used to select range.
     window.navigator.clipboard.writeText(password)

@@ -3,7 +3,7 @@ import { useState } from "react"
 
 function App() {
   const [color, setColor] = useState("olive")
-
+// onClick expects a function...if we directly write onClick = {setColor("red")} then the returned value of setColor will go to onClick but onClick doesn't want it.
   return (
     <div className="w-full h-screen duration-200"
     style={{backgroundColor: color}}
@@ -25,6 +25,16 @@ function App() {
           className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
           style={{backgroundColor: "blue"}}
           >Blue</button>
+          <button
+          onClick={() => setColor("pink")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "pink"}}
+          >Pink</button>
+          <button
+          onClick={() => setColor("yellow")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "yellow"}}
+          >Yellow</button>
         </div>
       </div>
     </div>

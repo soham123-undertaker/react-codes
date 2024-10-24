@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <h1 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind test</h1>
-      <Card username="chaiaurcode" some = {myObj}/> 
+      <Card username="chaiaurcode" some = {myObj} btnText={Habu}/> 
       {/* We cannot pass direct objects or arrays but can pass them by passing their references */}
     </>
   )

@@ -22,6 +22,7 @@ function customRender(reactElement,container){
 }
 
 //behind the scene the html(or jsx) that we have returned...how react sees this...react tries to create a tree of the element that we have returned.
+//At the end of the day whatever jsx we write inside function in react is parsed to become like this.
 const reactElement = {
     type : 'a',
     props: {
